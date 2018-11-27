@@ -1,0 +1,32 @@
+<div class="w3-rest" >
+  <div class="w3-display-container">
+    <img src="../../assets/img/facef.gif" alt="" width="100%;" class="backimage">
+
+
+    <div class="w3-display-middle w3-third cor_facef margin-right opacidade-normal w3-round">
+      <div class="">
+        <div class="w3-container">
+          <h1 align="center">Portal	 DaHora</h1>
+        </div>
+        <form class="w3-container w3-card-4">
+          <p>      
+            <label class="w3-text-white"><b>Codigo</b></label>
+            <input class="w3-input w3-border" name="first" type="text" id='usuario' [(ngModel)]="usuario.usuario"></p>
+            <p>      
+              <label class="w3-text-white"><b>Senha:</b></label>
+              <input class="w3-input w3-border" name="last" type="password" id='senha' [(ngModel)]="usuario.senha"></p>
+              <p> 
+                <label class="w3-red" *ngIf="checagem">/*Login ou senha incorretos.</label><br *ngIf="checagem">
+                <p><a href="http://sga.unifacef.com.br/EddydataApp-war/pages/system/recuperar-senha.jsf;jsessionid=1a9748eefbd98cd514d88dac35de">Esqueceu a senha</a></p>     
+                <input class="w3-check center" type="checkbox">
+                <label>Lembra-se de mim</label>
+                <p><input class="w3-check center" type="checkbox">
+                  <label>Mantenha Conectado</label></p>
+                  <p>
+                    <button  class="w3-half center w3-button w3-block w3-white" (click)="fazerLogin()">LOGIN</button></p>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>

@@ -1,0 +1,69 @@
+
+  <div class=" w3-half" layout="column">
+    <div id="chartContainer2"  style="margin-top:2%; height: 100%; width: 100%;">
+
+        <h3 class="titulo" style=" text-indent: 10%">SUAS HORAS:  {{grafico?.horas_aluno}}</h3>
+
+        <div style="display: block;">
+          <canvas baseChart
+                      [data]="doughnutChartData2"
+                      [labels]="doughnutChartLabels2"
+                      [colors]="colors2"
+                      [chartType]="doughnutChartType2"
+                      [legend]="doughnutchartDisplay2"
+                      (chartHover)="chartHovered2($event)"
+                      (chartClick)="chartClicked2($event)"></canvas>
+        </div>
+    </div>
+  </div>
+  <div class="w3-quarter " layout="column">
+
+    <div id="chartContainer"  style=" margin: 8%;  width: 100%;">
+      <h3 class="titulo">DETALHAMENTO</h3>
+      <div style="display: block; ">
+        <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [colors]="colors"
+                    [chartType]="doughnutChartType"
+                    [legend]="doughnutchartDisplay"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+
+    <input class="w3-third w3-input w3-border w3-padding" type="text" placeholder="Pesquiza por nome.." id="myInput" onkeyup="myFunction()">
+    <table class="w3-table-all w3-centered w3-hoverable" id="myTable" style="color: #000; margin-bottom: 0%;" >
+      <tr class="cor_facef" style="background-color: #344f8a">
+        <th style="width: 20px;">Data</th>
+        <th>Descrição</th>
+        <th style="width: 20px;">Horas</th>
+        <th>Tipo</th>
+        <th style="width: 20px;">Aprovação</th>
+      </tr>
+      <tr *ngFor="let t of tabelas">
+        <td  style="width: 20px;">{{t.data_inicio}}</td>
+        <td>{{t.nome}}</td>
+        <td  style="width: 20px;">{{t.horas_dia}}</td>
+        <td>{{t.local_evento}}</td>
+        <td  style="width: 20px;">V</td>
+      </tr>
+
+
+    </table>
+  </div> 
+  
+  <div class="w3-container w3-quarter w3-right">
+   <div>
+    <div class="w3-light-grey w3-half w3-right w3-card w3-border w3-margin w3-round" style="width: 70%;">
+     <div class=" w3-center w3-margin "><img style="width: 46%; height: 50%;" src="../../assets/img/silueta.jpg" alt=""></div>
+     
+     <div class="w3-margin" *ngFor="let a of alunos">
+       <p>
+        Nome: {{a.nome_aluno}} <br>
+        Codigo: {{a.id_aluno}} <br>
+        Curso: {{a.nome_curso}} <br>
+       </p>
+     </div>
+   </div>
+ </div>

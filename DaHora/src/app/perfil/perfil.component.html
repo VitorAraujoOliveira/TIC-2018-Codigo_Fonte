@@ -1,0 +1,63 @@
+<div class="w3-row tela">
+		<div class="w3-third w3-container">
+			<div class=" w3-center w3-margin  "><img class="w3-border" style="width: 40%" src="../../assets/img/silueta.jpg" alt="">
+			</div>
+		</div>
+		<div class="w3-twothird w3-container w3-border-left		">
+			<div class="w3-half">
+				<div class="w3-container" *ngFor="let a of alunos">
+					<div class=" w3-container w3-section">
+						<h2>Dados Pessoais</h2>
+						<p>
+							Nome: {{a.sobrenome_aluno}} 
+						</p>
+						<p>
+							Codigo: {{a.id_aluno}} <br>
+						</p>
+						<p>
+							Curso: {{a.nome_curso}} <br>
+						</p>
+						<p>
+							CPF: {{a.cpf}} <br>
+						</p>
+						
+
+						<p>
+							E-mail: {{a.email}} <br>
+						</p>
+						<p>
+							Data Conclusão: {{a.dt_conclusao}} <br>
+						</p>
+						<p>
+								Ano: {{a.ano}} - Semestre: {{a.semestre}}<br>
+							</p>
+					</div>
+					
+				</div>
+
+			</div>
+			<div class="w3-half">
+					<div class="w3-container" *ngFor="let c of curso">
+						<div class=" w3-container w3-section">
+							<h2>Dados Curso</h2>
+							<p>
+								Nome Curso: {{c.nome_curso}} 
+							</p>
+							<p>
+								Nome Coordenador: {{c.nome_coordenador}} 
+							</p>
+							<p>
+								Carga Horaria: {{c.carga_horaria}} <br>
+							</p>
+							<p>
+								Data criação: {{c.data_criacao}} <br>
+							</p>
+							<p>
+								Descrição: {{c.descricao}} <br>
+							</p>
+						</div>
+						
+					</div>
+	
+				</div>
+		</div>

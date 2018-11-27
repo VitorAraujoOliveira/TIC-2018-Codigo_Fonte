@@ -1,0 +1,11 @@
+.cor_facef{
+	background-color: #344f8a;
+	color: #fff;
+}
+.backimage{
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
