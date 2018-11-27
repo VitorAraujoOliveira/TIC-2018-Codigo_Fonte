@@ -1,0 +1,1 @@
+Esta pasta contém todas as aplicações utilizadas em ANGULAR e seus módulos
