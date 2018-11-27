@@ -1,0 +1,1 @@
+Esta pasta contém todos os dados da API Python desenvolvida, principalmente app.py
